@@ -7,5 +7,3 @@ const firebaseAxios = axios.create({
 });
 
 export default firebaseAxios;
-
-// baseURL: baseURL
