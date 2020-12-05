@@ -1,0 +1,173 @@
+.PostInfoContainer { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PostInfo { 
+  display: grid;
+  width: 52%;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: minmax(15px, auto) minmax(15px, auto) minmax(15px, auto);
+  background-color: rgb(79, 0, 79);
+  border: 1px solid black;
+  border-bottom: none;
+  max-height: 74vh;
+  height: auto;
+  overflow-y: scroll;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: fixed;
+  bottom: 33px;
+}
+
+.InfoDivHidden {
+  border: none;
+  max-height: 0vh;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.PostInfo::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.PostInfo::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+}
+ 
+.PostInfo::-webkit-scrollbar-thumb {
+  background-color: rgb(20, 0, 20);
+  border-radius: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .PostInfo {
+    width: 75%;
+    /* max-height: 74vh; */
+    overflow-y: scroll;
+    padding: 0% 5%;
+  }
+ }
+
+.SpinnerContainer {
+  grid-area: 1 / 1 / 3 / 3;
+  border: 2px solid orange;
+  margin: 0;
+  padding: 0;
+}
+
+.PostInfo span {
+  color: white;
+  margin: 0px 10px;
+  /* font-size: 1em; */
+}
+
+.iconSpan {
+  /* background-color: lightgreen; */
+}
+
+.PostInfo i {
+  font-size: 1.5em;
+}
+
+.topRight li {
+/* heart icon next to artist's tag */
+/* background-color: pink; */
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.artistTag {
+  padding: 2px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.artistTag
+
+p {
+  /* color: white!important; */
+  margin: 5px;
+}
+
+.topLeft {
+  /* background-color: red; */
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0.9em;
+}
+
+.bottomLeft {
+  /* background-color: blue; */
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0.4em;
+}
+
+.topRight {
+  /* background-color: yellow; */
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: left;
+  display: inline-block;
+  height: auto;
+}
+
+.bottomRight {
+  grid-area: 2 / 2 / 3 / 3;
+  height: auto;
+  /* max-height: 90vh; */
+  /* text-align: left; */
+}
+
+.artistHeartLiked {
+  color: red!important;
+}
+
+.artistHeartNotLiked {
+  color: white!important;
+}
+
+.artistHeartNotLiked:hover {
+  color: red !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  /* border: 1px solid red; */
+}
+
+li {
+  /* border: 1px solid grey; */
+  padding: 5px 0px 5px 5px;
+  display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.bottomRight li {
+  padding: 0px 0px 0px 0px;
+  font-size: 10px;
+}
+
+.bold {
+  font-weight: 900;
+  font-size: 14px;
+  color: rgb(20, 0, 20)!important;
+}
+
+.postIdFooter {
+  grid-area: 3 / 1 / 4 / 2;
+  font-size: 9px;
+  color: white;
+}

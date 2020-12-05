@@ -1,0 +1,11 @@
+.ArtistsPage {
+  width: 100vw;
+  min-height: 100vh;
+  text-align:center;
+  /* border: 3px solid yellow; */
+  position: relative;
+}
+
+.artistsPageBottomBuffer {
+  height: 60px;
+}

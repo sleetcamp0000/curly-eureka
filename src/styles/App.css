@@ -1,0 +1,92 @@
+.App {
+    /* border: 5px solid red; */
+    height: 100%;
+    /* background-color: red; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.MoreStrip {
+  background-color: rgb(20, 0, 20);
+  width: 100%;
+  /* border: 3px solid cyan; */
+  padding: 0;
+  /* margin: 5px 5px; */
+  /* padding-bottom: 80px; */
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 82px;
+}
+
+.MoreStrip #button {
+  -webkit-appearance: none;
+  padding: 10px 20px;
+  border: 1px solid purple;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  /* font-weight: 300; */
+  font-size: 15px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.MoreStrip #button:hover {
+  color: purple;
+  border: 1px solid white;
+  transition: .2s;
+}
+
+.SpinnerComponentContainer {
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

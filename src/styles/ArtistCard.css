@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'PoetsenOne-Regular';
+  src: url(../fonts/PoetsenOne-Regular.otf);
+}
+
+.ArtistCard {
+  /* border: 1px solid black; */
+  font-family: 'PoetsenOne-Regular', sans-serif;
+  font-weight: 400;
+
+  background-color: rgb(66, 0, 66);
+  width: 40%;
+  padding: 7px;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: 0.7s;
+  height: 150px;
+
+  display: grid;
+  grid-template: 50% 50% / 50% 1fr; /*rows, columns */
+  /* border: 1px solid rgb(195, 95, 145); */
+  box-shadow: 1px 1px 8px 3px rgb(164, 74, 120);
+}
+
+@media screen and (max-width: 768px) {
+  .ArtistCard {
+    width: 90%;
+  }
+ }
+
+.ArtistCard .Left {
+  grid-area: 1 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.ArtistCard .Left img {
+  /* border: 2px solid red; */
+  width: auto;
+  max-width: 90%;
+  height: 100%;
+  /* object-fit: cover; */
+  overflow: hidden;
+}
+
+.ArtistCard .RightTop {
+  /* border: 1px solid yellow; */
+  grid-area: 1 / 2 / 2 / 3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.ArtistName {
+  /* border: 1px solid white; */
+  color: hotpink;
+  /* font-style: italic; */
+  /* font-weight: 700; */
+  font-size: 100%;
+}
+
+.ArtistCard .RightBottom {
+  /* border: 1px solid green; */
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  padding: 0;
+  margin: 0;
+  height: 90%;
+  position: relative;
+  bottom: 10px;
+}
+
+.ArtistCard .AllContainer {
+  grid-area: 1/1/2/2;
+  /* border: 3px solid white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ArtistCard .NewContainer {
+  grid-area: 2/1/3/2;
+  /* border: 3px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likedThumbImg {
+  border-radius: 3px;
+}
+
+
+.RightBottom .link {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: hotpink;
+  width: 75%;
+  height: 90%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(42, 0, 42);
+}
+
+.RightBottom .link:hover {
+  background-color: rgb(60, 21, 255);
+}
+
+.NewContainer .klickable {
+  font-weight: 700;
+  background-color: rgb(22, 149, 88);
+}
+
+.NewContainer .klickable:hover {
+  background-color: rgb(55, 225, 143);
+}
+
+.NewContainer .unklickable { 
+  pointer-events: none;
+  background-color: darkgrey;
+  color: rgb(132, 132, 132);
+}
+
+.newPostsIcon {
+  color: black;
+  padding-left: 10px;
+}
+
+#link {
+  text-decoration: none;
+  width: 100%;
+}

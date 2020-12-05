@@ -1,0 +1,107 @@
+.ResultsPage {
+  /* height: 90vh; */
+  /* border: 5px solid red; */
+  
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  padding-bottom: 195px;
+}
+
+.ResultsPage button:hover {
+  background-color: white;
+  box-shadow: 0 9px black;
+}
+
+.nothingToShowMessage {
+  display: grid;
+  grid-template: 45px 1fr / 1fr;
+}
+
+.nothingToShowMessage i {
+  grid-row: 1;
+  color: white;
+  font-size: 40px;
+}
+
+.nothingToShowMessage h1 {
+  grid-row: 2;
+  color: white;
+  font-size: 4vh;
+}
+
+
+/* .MoreStrip {
+  padding: 20px 0px;
+  font-size: 12px;
+  background-color: black;
+  color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* .MoreStrip .spinnerContainer {
+
+} */
+
+
+
+.CaughtUpStrip {
+  /* padding: 20px 0px; */
+  /* padding: 20px 0px 80px 0px; */
+  font-size: 24px;
+  background-color: darkred;
+  color: lightpink;
+  /* border-top: 2px solid darkred; */
+  width: 100vw;
+  /* margin: 0; */
+  position: absolute;
+  bottom: 60px;
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+  padding: 20px 0px;
+}
+
+.CaughtUpStrip button {
+  color: rgb(78, 3, 3);
+  font-weight: bold;
+  background-color: lightpink;
+  padding: 10px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 15px;
+}
+                  
+.thumbSpan {
+  /* border: 5px solid red; */
+  width: 50%;
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#xylo {
+  /* border: 5px solid green; */
+  height: 200px;
+  max-width: auto;
+  padding: 0;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .CaughtUpStrip {
+    /* bottom: -11px; */
+  }
+
+.CaughtUpStrip button {
+  margin-top: 9px;
+  background-color: rgb(242, 156, 169);
+  color: rgb(255, 252, 252);
+}
+
+}

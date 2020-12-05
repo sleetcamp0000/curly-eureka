@@ -1,0 +1,200 @@
+.FilterBar {
+  padding: 0;
+  margin: 0;
+}
+
+.masterTagsContainer {
+  /* border: 3px solid red; */
+  height: auto;
+  position: fixed;
+  padding-bottom: 50px;
+}
+
+.tagSearchContainer {
+  padding: 5px 0px;
+  background-color: rgb(66, 0, 66);
+  padding-bottom: 10px;
+  /* border: 2px solid blue; */
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+}
+
+
+.desiredTagsFilterContainer {
+  background-color: rgb(0, 32, 0);
+  height: auto;
+  display: table-cell;
+  /* border: 1px solid darkgreen; */
+  /* border-top: none; */
+  border-bottom: none;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+}
+
+.visiblefalse {
+  bottom: -999px;
+  transition: bottom 1s ease-in-out;
+}
+
+.visibletrue {
+  bottom: 60px;
+  transition: bottom 0.5s ease-in-out;
+}
+
+#visibletrue {
+  border: 1px solid darkgreen;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .desiredTagsFilterContainer {
+    height: 50.75vh;
+    /* overflow-y: scroll; */
+  }
+
+  .FilterBar {
+    /* bottom: 60px; */
+    /* height: 999px; */
+  }
+
+  
+  .visiblefalse {
+    max-height: 75vh;
+    bottom: -999px;
+  }
+  
+  .visibletrue {
+    max-height: 75vh;
+    overflow-y: scroll;
+  }
+
+}
+
+.tempDisallowedsContainer {
+  background-color: rgb(40, 0, 0);
+  border: 1px solid darkred;
+  border-bottom-style: dashed;
+  height: auto;
+  outline: none;
+}
+
+.tagButton {
+  -webkit-appearance: none;
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  /* color: black; */
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.tagButtonDesired {
+  border: 1px solid rgb(0, 113, 0);
+  color: rgb(0, 113, 0);
+  outline: none;
+}
+
+.tagButtonDisallowed {
+  border: 1px solid  rgb(171, 0, 0);
+  background-color: rgb(54, 0, 0);
+  color: rgb(171, 0, 0);
+}
+
+.desiredButtonOn {
+  background-color: rgb(0, 37, 0);
+  border: 1px solid lightgreen;
+  color: lightgreen;
+  outline: none;
+}
+
+.disallowedButton {
+  pointer-events: none;
+}
+
+.buttonOff {
+  /* background-color: lightgrey; */
+  /* color: black; */
+  /* color: rgb(0, 113, 0); */
+  /* font-weight: 400; */
+}
+
+.tinyButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.tagSearchContainer #button {
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 1%;
+  padding: 6px;
+  font-weight: 200;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.addButton {
+  margin-left: 10px;
+}
+
+.unclickable { 
+  pointer-events: none;
+  color: lightgray;
+}
+
+.clickable {
+  color: black;
+  background-color: rgb(120, 164, 120);
+}
+
+.tagInfoDisplayer {
+  background-color: lightseagreen;
+}
+
+.filterTagSearchInput {
+  width: 40%;
+  height: 32px;
+  margin: 0px 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-left: 1%;
+  transition:.5s;
+}
+
+.filterTagSearchInput:focus {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  outline: none;
+  transition:.5s;
+}
+

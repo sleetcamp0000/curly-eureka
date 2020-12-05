@@ -1,0 +1,113 @@
+.FilterBar {
+  height: 100%;
+  background-color:blueviolet;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 7vh;
+}
+
+/* .FilterBarHidden {
+  visibility: hidden
+} */
+
+.desiredTagsContainer {
+  background-color: palegreen
+}
+
+.disallowedTagsContainer {
+  background-color: lightpink
+}
+
+.tagContainer {
+  height: 245px;
+  background-color: rgb(237, 237, 237);
+  margin: 5px 5px;
+  padding: 2px 5px;
+  border: 1px solid purple;
+  border-radius: 15px;
+  display: inline-block;
+  height: auto;
+  text-align: center;
+}
+
+.tagButton {
+  -webkit-appearance: none;
+  margin: 2px 2px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  width: auto;
+  height: auto;
+}
+
+.desiredButtonOn {
+  background-color: darkgreen;
+}
+
+.disallowedButton {
+  pointer-events: none;
+}
+
+.buttonOff {
+  background-color: lightgrey;
+  color: black;
+}
+
+.tinyButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.delete {
+
+}
+
+.info {
+
+}
+
+.deleteButton:hover {
+  background-color: red;
+  color: white;
+}
+
+.tagSearchContainer {
+  padding: 5px 0px;
+}
+
+.addButton {
+  margin-left: 10px;
+}
+
+.unclickable { 
+  pointer-events: none;
+color: lightgray;
+}
+
+.clickable {
+  color: black;
+  background-color: rgb(120, 164, 120);
+}
+
+.tagAdderContainer {
+  padding: 5px 0px;
+  background-color: lightblue;
+  height: auto;
+}
+
+.tagCategorySwitcher {
+  background-color: gray;
+}
+
+.tagInfoDisplayer {
+  background-color: lightseagreen;
+}

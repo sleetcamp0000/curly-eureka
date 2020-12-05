@@ -1,0 +1,668 @@
+@font-face {
+  font-family: 'PoetsenOne-Regular';
+  src: url(../fonts/PoetsenOne-Regular.otf);
+}
+
+.TagsPage {
+  /* color: rgb(20, 20, 159); */
+  height: 90vh;
+  text-align: center;
+  /* border: 2px solid yellow; */
+}
+
+.TagsPageContainer {
+  width: 75vw;
+  /* border: 2px solid green; */
+  margin: 0 auto;
+}
+
+.TagsPage button {
+  /* border-radius: 5px; */
+}
+
+.masterButtonsContainer {
+  background: repeating-linear-gradient(
+  45deg,
+  rgb(220, 199, 80),
+  rgb(220, 199, 80) 10px,
+  rgb(48, 48, 48) 10px,
+  rgb(48, 48, 48) 20px
+);
+width: 100%;
+margin: auto;
+display: table;
+}
+
+.masterButtonsContainer #cont {
+  float: left;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masterButtonsContainer button {
+  border-radius: 10px;
+  border: none;
+  height: 60%;
+  width: 80%;
+  background-color: rgb(64, 64, 64);
+  color: white;
+}
+
+.undoAllChangesButton:hover {
+  background-color: rgb(127, 127, 127);
+}
+
+.saveToDBButton:hover {
+  background-color: red;
+  color: white !important;
+}
+
+#master {
+  padding-right: 8px;
+}
+
+.wrenchIconContainer {
+  color: white;
+  font-size: 32px;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(40, 40, 40, 1));
+  margin: 0 auto;
+}
+
+.undoButtonContainer {
+  background-color: rgb(40, 40, 40);
+}
+
+.undoAllChangesButton {
+  /* align-items: center; */
+  /* margin: 10px 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saveToDBButtonContainer {
+    background-color: rgb(40, 40, 40);
+}
+
+.saveToDBButton {
+  /* border: 5px solid red; */
+  /* height: 40px;  */
+  /* width: 55%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(247, 113, 113) !important;
+}
+
+.emptyContainer {
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(40, 40, 40, 1));
+}
+
+
+@media screen and (max-width: 768px) {
+  .masterButtonsContainer button {
+    height: 70%;
+  }
+  
+  .masterButtonsContainer #cont {
+    height: 50px;
+  }
+
+  .wrenchIconContainer {
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(40, 40, 40, 1));
+  }
+
+  .emptyContainer {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(40, 40, 40, 1));
+  }
+
+  .saveToDBButton:hover {
+    background-color: rgb(64, 64, 64);
+    color: white !important;
+  }
+}
+
+
+
+/* ----------------------------------------------------- */
+
+
+.tagAdderLabel {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  top: 13px;
+}
+
+.tagAdderContainer {
+  /* margin: 0 auto; */
+  /* border: 5px solid blue; */
+  padding: 20px 0px;
+}
+
+.tagAdder {
+  /* padding: 0% 20%; */
+  margin: 10px auto;
+  width: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(40, 40, 40);
+}
+
+.category-disallowed {
+  max-height: 69px;
+  transition: max-height 0.5s ease-out;
+  border: 2px solid darkred;
+}
+
+.category-desired  {
+  max-height: 999px;
+  transition: max-height 0.5s ease-in;
+  border: 2px solid darkgreen;
+}
+
+.tagAdder button {
+  border: 0px;
+  /* width: 30px; */
+  border-radius: 5px;
+  /* background-color: palegreen; */
+  height: 90%;
+}
+
+.tagAdder #c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagAdder input {
+  width: 100%;
+  border: 2px solid brown;
+}
+
+.tagAdderUpper {
+  display: grid;
+  grid-template: 1fr 1fr / 20% 60% 20%;
+  grid-gap: 2px;
+  margin-top: 2px;
+}
+
+
+.tagAdderUpper .categoryButtonContainer {
+  grid-area: 1/1/2/3;
+  /* border: 2px solid red; */
+  font-weight: bold;
+}
+
+.tagAdderUpper .categoryButtonContainer button {
+  width: 150px;
+  outline: none;
+}
+
+#cat-desired {
+  color: palegreen;
+  background-color: rgb(18, 103, 18);
+  border: 1px solid palegreen;
+  /* transition: 0.1s; */
+}
+
+#cat-disallowed {
+  background-color: rgb(156, 45, 45);
+  color: rgb(231, 189, 189);
+  border: 1px solid darkred;
+  /* transition: 0.1s; */
+}
+
+
+.tagAdderUpper .tagInputContainer {
+  grid-area: 2/1/3/3;
+  /* border: 2px solid orange; */
+  padding-left: 5px;
+  padding-bottom: 2px;
+}
+
+.tagAdder input {
+  border-radius: 5px;
+  border: 2px solid rgb(145, 145, 145);
+  background-color: rgb(237, 237, 237);
+  padding-left: 2%;
+}
+
+.tagAdder input:focus {
+  border: 2px solid purple;
+  background-color: white;
+  outline: none;
+}
+
+.tagAdderUpper .isArtistButtonContainer {
+  grid-area: 1/3/2/4;
+  /* border: 2px solid white; */
+}
+
+.isArtistButtonContainer button {
+  background-color: rgb(120, 120, 120);
+  color: rgb(209, 255, 213);
+  border: 1px solid lime;
+  outline: none;
+}
+
+.isntArtistButton {
+  color: rgb(120, 120, 120) !important;
+  background-color: rgb(60, 60, 60) !important;
+  border: 1px solid  rgb(60, 60, 60) !important;
+}
+
+
+.tagAdderUpper .addButtonContainer {
+  grid-area: 2/3/3/4;
+  /* border: 2px solid yellow; */
+}
+
+.tagAdderUpper .addButtonContainer button {
+  width: 90%;
+}
+        
+.tagAdderLower {
+  margin-top: 2px;
+  display: grid;
+  grid-template: 1fr minmax(10px, auto)/ 20% 60% 20%;
+  grid-gap: 2px;
+  margin-bottom: 4px;
+}
+
+.tagAdderLower .typeButtonContainer {
+  grid-area: 1/1/2/2;
+  /* border: 2px solid lime; */
+}
+
+.typeButtonContainer button {
+  font-weight: bold;
+  font-size: 16px;
+  width: 50%;
+}
+
+.tagAdderLower .newDependantInputContainer {
+  grid-area: 1/2/2/3;
+  /* border: 2px solid green; */
+}
+
+.tagAdderLower .dependantAddButtonContainer {
+  grid-area: 1/3/2/4;
+  /* border: 2px solid darkgreen; */
+}
+
+/* .dependantAddButtonContainer button {
+  width: 100%;
+} */
+
+
+.dependantAddButtonContainer button {
+  width: 50%;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+  color: darkgreen;
+}
+
+.tagAdderLower .dependantsLabelContainer {
+  grid-area: 2/1/3/2;
+  /* border: 2px solid blue; */
+  color: white;
+}
+
+.tagAdderLower .dependantsTagsContainer {
+  grid-area: 2/2/3/3;
+  /* border: 2px solid darkmagenta; */
+}
+
+.tagAdderLower .newDependantTagContainer {
+  border: 1px solid rgb(58, 58, 193);
+  border-radius: 5px;
+  display: flex;
+  justify-content: left;
+  color: darkblue;
+  background-color: rgb(212, 204, 255);
+}
+
+.newDependantTagContainer button {
+  background-color: rgb(173, 166, 215);
+  color: darkblue;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+
+
+
+/* ----------------------------------------------------- */
+
+
+
+.typeColumnsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typeColumns {
+  /* width: 75vw; */
+  width: 100%;
+  /* display: grid;
+  grid-template: 100% / 50% 50%; */
+  /* border: 5px solid white; */
+  margin: 0 auto;
+}
+
+.desiredTagsContainer {
+  /* grid-area: 1 /1 / 2 / 2; */
+  background-color: rgb(26, 52, 26);
+  border-radius: 15px;
+  text-align: left;
+  float: left;
+}
+
+.disallowedTagsContainer {
+  /* grid-area: 1 /2/ 2 / 3; */
+  background-color: rgb(48, 0, 0);
+  border-radius: 15px;
+  /* border: 2px solid darkred; */
+  float: left;
+}
+
+.disallowedTagsContainer #desiredDelete {
+  background-color: rgb(190, 148, 148);
+  color: darkred;
+}
+
+.disallowedTagsContainer button {
+  border: 1px solid  rgb(190, 148, 148);
+  width: 60px;
+  border-radius: 5px;
+  background-color: palegreen;
+}
+
+#desiredHeading {
+  color: rgb(0, 169, 0);
+  border: 1px solid  rgb(1, 134, 1);
+  border-radius: 30px;
+  text-align: center;
+  font-family: 'PoetsenOne-Regular', sans-serif;
+  font-size: 32px;
+  margin-top: 2%;
+}
+
+#disallowedHeading {
+  color: darkred;
+  border: 1px solid darkred;
+  border-radius: 30px;
+  text-align: center;
+  font-family: 'PoetsenOne-Regular', sans-serif;
+  font-size: 32px;
+  margin-top: 2%;
+}
+
+
+
+.desiredTagCardContainer {
+  margin: 2% auto;
+  /* border: 1px solid rgb(0, 113, 0); */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 8px 2px rgb(18, 18, 18);
+  font-size: 15.5px;
+  color: black;
+  width: 100%; ;
+}
+
+.disallowedTagCardContainer {
+  margin: 2% 2%;
+  border: 1px solid rgb(220, 112, 112);
+  box-shadow: 5px 5px 8px 2px rgb(18, 18, 18);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+
+.desiredTagCardGrid {
+  display: grid;
+  grid-template: 35px 1fr minmax(10px, auto) / 30% 70%;
+  background-color: palegreen;
+  /* border: 1px solid rgb(0, 113, 0); */
+  /* padding-bottom: 2px; */
+}
+
+.disallowedTagCardGrid {
+  display: grid;
+  grid-template: 100% / 70% 30%;
+}
+
+.disallowedDeleteButtonContainer {
+  grid-area: 1/2/2/3;
+  /* background-color: rgb(255, 210, 210); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beingEditedDesired {
+  border: 1px solid lime;
+}
+
+.desiredNameContainer {
+  grid-area: 1 / 1 / 2 / 3; 
+  color: palegreen;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2%;
+  background-color: rgb(18, 103, 18);
+}
+
+.disallowedNameContainer {
+  grid-area: 1 / 1 / 2 / 3; 
+  background-color: rgb(156, 45, 45);
+  color: rgb(231, 189, 189);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 2%;
+
+}
+
+.typeContainer {
+  grid-area: 2 / 1 / 3 / 2; 
+  /* background-color: cyan; */
+  padding-left: 8%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.typeContainer button {
+  margin-left: 5%;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.typeA {
+  color: darkred !important; 
+  border: 1px solid red !important;
+  background-color: lightpink !important;
+  outline: none !important;
+  }
+  
+
+.typeB {
+color: darkblue !important;
+background-color: rgb(149, 200, 244) !important;
+border: 1px solid blue !important;
+outline: none !important;
+}
+
+
+.dependantsLabelContainer {
+  grid-area: 3 / 1 / 4 / 2; 
+  /* background-color: yellow; */
+  padding-left: 8%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+#noneLabel {
+ margin-left: 5px;
+  /* position: relative;
+  top: 5px; */
+}
+
+.actionButtonsContainer {
+  grid-area: 2 / 2 / 3 / 3; 
+  background-color: rgb(215, 255, 215);
+  padding: 1%;
+}
+
+.actionButtonsContainer #desiredDelete {
+  background-color: rgb(190, 148, 148);
+  color: darkred;
+}
+
+.actionButtonsContainer button {
+  border: 1px solid white;
+  width: 60px;
+  border-radius: 5px;
+  background-color: palegreen;
+}
+
+.dependantsContainer {
+  grid-area: 3 / 2 / 4 / 3; 
+  background-color: rgb(215, 255, 215);
+}
+
+.dependantButtonContainer {
+  background-color: rgb(212, 207, 246);
+  padding-left: 1%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.dependantButtonContainer span {
+  /* margin-left: 5px; */
+  color: darkblue;
+}
+
+.dependantButtonContainer button {
+  /* width: 18%; */
+  border: 0px;
+  border-radius: 10px;
+  color: darkred;
+  background-color: rgb(173, 166, 215);
+  margin: 1px;
+}
+
+.dependantButtonContainer #name {
+  padding-left: 2%;
+  color: darkblue;
+}
+
+
+.dependantInputContainer {
+  background-color: palegreen;
+  display: grid;
+  grid-template: 100% / 30% 70%;
+}
+
+.dependantInputLabel {
+  background-color: palegreen;
+  padding-left: 8%;
+  padding-top: 2.15%;
+}
+
+.dependantInput {
+  background-color: rgb(215, 255, 215);
+
+}
+
+.dependantInput input {
+  border: 1px solid rgb(145, 145, 145);
+  border-radius: 5px;
+  background-color: rgb(237, 237, 237);
+  outline: none;
+  transition:.5s;
+  width: 79%;
+}
+
+.dependantInput input:focus {
+  border: 1px solid darkgreen;
+  background-color: white;
+}
+
+.dependantInput button {
+  width: 18%;
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+  color: darkgreen;
+}
+
+
+
+.tagsUnclickable {
+  color: gray;
+  background-color: lightgray !important;
+  pointer-events: none;
+  border: 2px solid white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .TagsPageContainer {
+    width: 100vw;
+  }
+  .tagAdder {
+    padding: 0;
+    width: 100vw;
+  }
+.desiredTagCardContainer {
+  font-size: 15px;
+  margin: 4% auto;
+}
+.desiredTagCardGrid {
+  grid-template: 37px 31px minmax(31px, auto) / 30% 70%;
+}
+
+.disallowedTagCardContainer {
+  font-size: 15px;
+  margin: 4% auto;
+}
+
+#noneLabel {
+   position: relative;
+   top: 4.25px;
+ }
+
+ .tagAdderUpper {
+   grid-template: 1fr 1fr / 27% 53% 20%;
+ }
+
+ .tagAdderLower {
+  grid-template: 1fr minmax(10px, auto)/ 27% 53% 20%;
+}
+
+.desiredTagCardContainer {
+  border: 1px solid rgb(0, 113, 0);
+}
+
+.tagAdderLabel {
+  font-size: 24px;
+  top: 13px;
+  color: rgb(191, 191, 191);
+}
+
+}

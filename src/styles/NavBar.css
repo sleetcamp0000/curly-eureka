@@ -1,0 +1,87 @@
+.NavBar {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(66, 0, 66);
+  /* position: sticky;
+  top: 0vh; */
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  padding: 0% 10%;
+}
+
+.buttonsContainer { 
+  display: grid;
+  grid-template: 100% / 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  padding-left: auto;
+  padding-right: auto;
+  /* border: 2px solid blue */
+}
+
+.buttonsContainer i {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeButtonContainer {
+  grid-area: 1 / 1 ;
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+.filtersButtonContainer {
+  grid-area: 1 / 2 ;
+  /* border: 1px solid yellow; */
+}
+
+.likesButtonContainer {
+  grid-area: 1 / 3 ;
+  /* border: 1px solid purple; */
+}
+
+.artistsButtonContainer {
+  grid-area: 1 / 4 ;
+  /* border: 1px solid orange; */
+}
+
+.tagsButtonContainer {
+  grid-area: 1 / 5 ;
+  /* border: 1px solid pink; */
+}
+
+.logoutButtonContainer {
+  grid-area: 1 / 6 ;
+  /* border: 1px solid green; */
+}
+
+.NavBar span {
+  font-size: 32px;
+  /* color: black; */
+}
+
+.button {
+  display: inline-block; 
+  margin-right: 20px;
+  border: 2px solid green;
+}
+
+@media screen and (max-width: 768px) {
+  .NavBar {
+    padding: 0
+  }
+ 
+  .NavBar span {
+   font-size: 24px;
+ }
+ }
