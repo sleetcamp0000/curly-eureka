@@ -139,6 +139,7 @@ class Site extends Component {
       .then(({ data }) => {
         const { newestIdLastSession } = data; // 4221069 4166059
         console.log(newestIdLastSession, ' / / / / / / / / ')
+
         api.fetchThumbs(newestIdLastSession, token).then(res => { // <<<
 
           u.fetchDecryptedPageOfPosts(`/sessionStorage/page_1.json`, this.state.posts, token)
